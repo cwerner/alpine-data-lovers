@@ -77,7 +77,16 @@ t2 = Talk("Streamlit - creating custom ML/ DS tools fast",
 t3 = Talk("Observation monitoring and time series visualization with Grafana",
           "Benjamin Fersch", 
           "IMK-IFU",
-          "Not available yet",
+          """\
+              Time variant processes are important in many scientific disciplines, 
+              in particular for environmental and ecosystem or climate research.
+              Time series data are gathered from observations with diverse techniques
+              and sensors but also from modeling. Grafana is a tool to easily
+              visualize, aggregate and compare such data based on the users
+              requirements. It can be used to monitor sensor recordings,
+              from computer systems to field stations. In this talk, we will
+              see various applications that visualize data from a time series database.
+              """,
           resources="[Slides](http://myslides.com)",
           video_url="https://www.youtube.com/watch?v=BHACKCNDMW8")
 

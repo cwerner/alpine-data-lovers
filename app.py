@@ -33,9 +33,9 @@ class Talk:
             **{self.speaker}** ({self.speaker_affiliation})
             """)
 
-        st.info(f"Summary: {self.summary}")
+        st.info(f"**Summary:** {self.summary}")
         if self.video_url:
-            st.video(self.video_url)
+            st.video(self.video_url, start_time=30)
         
         if self.resources:
             st.warning(self.resources)
@@ -46,9 +46,16 @@ talks = {}
 t1 = Talk("Visualizing large gridded data sets on the web with Bokeh Server",
           "Christian Chwala", 
           "IMK-IFU/ University of Augsburg",
-          "Here we'll have a nice summary...",
-          resources="[GitHub link](http://github.com/myrepo), [Slides](http://myslides.com)",
-          video_url="https://youtu.be/_T8LGqJtuGc")
+          """\
+              As datasets get larger and larger, it becomes more important
+              to provide interactive exploration tools on the web instead
+              of download links. Using a combination of *bokeh* server
+              and *xarray* it is easy to provide web visualization of
+              large local and remote data sets. This talk gives a short
+              introduction and some examples using gridded weather radar data.""",
+          resources="[GitHub link](https://github.com/cchwala/bokeh_examples_ifu_meetup), "
+                    "[Slides](http://myslides.com)",
+          video_url="https://www.youtube.com/watch?v=BHACKCNDMW8")
 
 t2 = Talk("Streamlit - creating custom ML/ DS tools fast",
           "Christian Werner", 
@@ -62,7 +69,7 @@ t3 = Talk("Observation monitoring and time series visualization with Grafana",
           "IMK-IFU",
           "Here we'll have a nice summary...",
           resources="[Slides](http://myslides.com)",
-          video_url="https://youtu.be/_T8LGqJtuGc")
+          video_url="https://www.youtube.com/watch?v=BHACKCNDMW8")
 
 talks["01-01-Chwala"] = t1
 talks["01-02-Werner"] = t2

@@ -2,7 +2,7 @@ import streamlit as st
 
 events = {0: "Introduction",
           1: "#01 - Web visualisation",
-          2: "#02 - ???"}
+          2: "#02 - TBA"}
 
 
 class Talk:
@@ -28,13 +28,14 @@ class Talk:
     
     def render(self):
         st.markdown(f"""\
-            ## {self.title}
+            ### {self.title}
 
             **{self.speaker}** ({self.speaker_affiliation})
             """)
 
         st.info(f"**Summary:** {self.summary}")
         if self.video_url:
+            st.error("Video not yet uploaded")
             st.video(self.video_url, start_time=30)
         
         if self.resources:
@@ -54,20 +55,29 @@ t1 = Talk("Visualizing large gridded data sets on the web with Bokeh Server",
               large local and remote data sets. This talk gives a short
               introduction and some examples using gridded weather radar data.""",
           resources="[GitHub link](https://github.com/cchwala/bokeh_examples_ifu_meetup), "
-                    "[Slides](http://myslides.com)",
+                    "[Slides](http://myslides.com), "
+                    "Libraries: [bokeh](https://docs.bokeh.org/en/latest/)/"
+                    "[xarray](http://xarray.pydata.org/en/stable/)]", 
           video_url="https://www.youtube.com/watch?v=BHACKCNDMW8")
 
 t2 = Talk("Streamlit - creating custom ML/ DS tools fast",
           "Christian Werner", 
           "IMK-IFU",
-          "Here we'll have a nice summary...",
-          resources="[GitHub link](https://github.com/cwerner/adl01_streamlit-demo), [Slides](http://myslides.com)",
-          video_url="https://youtu.be/_T8LGqJtuGc")
+          """\
+              In the last years more and more options to create and deploy data driven
+              apps emerged in the Python ecosystem. One of the newest contenders is
+              *streamlit*. It promises to get you from your data or analysis to a nice
+              functional deployed app in days instead of months. I'll quickly introduce
+              this new library and demo some simple apps.""",
+          resources="[GitHub link](https://github.com/cwerner/adl01_streamlit-demo),"
+                    "[Slides](http://myslides.com)"
+                    "Libraries: [streamlit](https://www.streamlit.io)",
+          video_url="https://www.youtube.com/watch?v=BHACKCNDMW8")
 
 t3 = Talk("Observation monitoring and time series visualization with Grafana",
           "Benjamin Fersch", 
           "IMK-IFU",
-          "Here we'll have a nice summary...",
+          "Not available yet",
           resources="[Slides](http://myslides.com)",
           video_url="https://www.youtube.com/watch?v=BHACKCNDMW8")
 

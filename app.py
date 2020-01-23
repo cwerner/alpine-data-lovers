@@ -45,7 +45,7 @@ class Talk:
 talks = {}
 
 t1 = Talk("Visualizing large gridded data sets on the web with Bokeh Server",
-          "Christian Chwala", 
+          "[Christian Chwala](https://www.imk-ifu.kit.edu/staff_Christian_Chwala.php)", 
           "IMK-IFU/ University of Augsburg",
           """\
               As datasets get larger and larger, it becomes more important
@@ -57,11 +57,11 @@ t1 = Talk("Visualizing large gridded data sets on the web with Bokeh Server",
           resources="[GitHub link](https://github.com/cchwala/bokeh_examples_ifu_meetup), "
                     "[Slides](http://myslides.com), "
                     "Libraries: [bokeh](https://docs.bokeh.org/en/latest/)/"
-                    "[xarray](http://xarray.pydata.org/en/stable/)]", 
+                    "[xarray](http://xarray.pydata.org/en/stable/)", 
           video_url="https://www.youtube.com/watch?v=BHACKCNDMW8")
 
 t2 = Talk("Streamlit - creating custom ML/ DS tools fast",
-          "Christian Werner", 
+          "[Christian Werner](https://www.imk-ifu.kit.edu/staff_Christian_Werner.php)", 
           "IMK-IFU",
           """\
               In the last years more and more options to create and deploy data driven
@@ -70,12 +70,12 @@ t2 = Talk("Streamlit - creating custom ML/ DS tools fast",
               functional deployed app in days instead of months. I'll quickly introduce
               this new library and demo some simple apps.""",
           resources="[GitHub link](https://github.com/cwerner/adl01_streamlit-demo),"
-                    "[Slides](http://myslides.com)"
+                    "[Slides](https://minio.cwerner.ai/adl/meetup-01/slides/adl01_werner-streamlit_slides.pdf)"
                     "Libraries: [streamlit](https://www.streamlit.io)",
           video_url="https://www.youtube.com/watch?v=BHACKCNDMW8")
 
 t3 = Talk("Observation monitoring and time series visualization with Grafana",
-          "Benjamin Fersch", 
+          "[Benjamin Fersch](https://www.imk-ifu.kit.edu/staff_Benjamin_Fersch.php)", 
           "IMK-IFU",
           """\
               Time variant processes are important in many scientific disciplines, 

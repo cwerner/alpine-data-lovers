@@ -2,7 +2,8 @@ import streamlit as st
 
 events = {0: "Introduction",
           1: "#01 - Web visualisation",
-          2: "#02 - TBA"}
+          2: "#02 - Dimensionality reduction",
+          3: "#03 - TBA"}
 
 
 class Talk:
@@ -44,6 +45,7 @@ class Talk:
 
 talks = {}
 
+
 t1 = Talk("Visualizing large gridded data sets on the web with Bokeh Server",
           "[Christian Chwala](https://www.imk-ifu.kit.edu/staff_Christian_Chwala.php)", 
           "IMK-IFU/ University of Augsburg",
@@ -55,9 +57,9 @@ t1 = Talk("Visualizing large gridded data sets on the web with Bokeh Server",
               large local and remote data sets. This talk gives a short
               introduction and some examples using gridded weather radar data.""",
           resources="[GitHub link](https://github.com/cchwala/bokeh_examples_ifu_meetup), "
-                    "[Slides](https://minio.cwerner.ai/adl/meetup-01/slides/adl01_chwala-bokeh.pdf), "
-                    "Libraries: [bokeh](https://docs.bokeh.org/en/latest/)/"
-                    "[xarray](http://xarray.pydata.org/en/stable/)", 
+                    "[Slides](https://minio.cwerner.ai/adl/meetup-01/slides/adl01_chwala-bokeh_slides.pdf), "
+                    "Resources: [Bokeh](https://docs.bokeh.org/en/latest/), "
+                    "[Xarray](http://xarray.pydata.org/en/stable/)", 
           video_url="https://www.youtube.com/watch?v=BHACKCNDMW8")
 
 t2 = Talk("Streamlit - creating custom ML/ DS tools fast",
@@ -69,9 +71,9 @@ t2 = Talk("Streamlit - creating custom ML/ DS tools fast",
               *streamlit*. It promises to get you from your data or analysis to a nice
               functional deployed app in days instead of months. I'll quickly introduce
               this new library and demo some simple apps.""",
-          resources="[GitHub link](https://github.com/cwerner/adl01_streamlit-demo),"
-                    "[Slides](https://minio.cwerner.ai/adl/meetup-01/slides/adl01_werner-streamlit_slides.pdf)"
-                    "Libraries: [streamlit](https://www.streamlit.io)",
+          resources="[GitHub link](https://github.com/cwerner/adl01_streamlit-demo), "
+                    "[Slides](https://minio.cwerner.ai/adl/meetup-01/slides/adl01_werner-streamlit_slides.pdf), "
+                    "Resources: [Streamlit](https://www.streamlit.io)",
           video_url="https://www.youtube.com/watch?v=BHACKCNDMW8")
 
 t3 = Talk("Observation monitoring and time series visualization with Grafana",
@@ -87,12 +89,24 @@ t3 = Talk("Observation monitoring and time series visualization with Grafana",
               from computer systems to field stations. In this talk, we will
               see various applications that visualize data from a time series database.
               """,
-          resources="[Slides](http://myslides.com)",
+          resources="Sorry - no slides, Resources: [Grafana](https://grafana.com), [InfluxDB](https://www.influxdata.com)",
           video_url="https://www.youtube.com/watch?v=BHACKCNDMW8")
+
+t4 = Talk("Reducing the dimension of your data - How losing information leads to finding information",
+          "[Julius Polz](https://www.imk-ifu.kit.edu/staff_Julius_Polz.php)", 
+          "IMK-IFU",
+          """\
+              An intro to dimensionality reduction and clustering of complex data. Details TBA...
+              """
+         )
+
+
+
 
 talks["01-01-Chwala"] = t1
 talks["01-02-Werner"] = t2
 talks["01-03-Fersch"] = t3
+talks["02-01-Polz"]   = t4
        
 
 def event01():
@@ -100,27 +114,51 @@ def event01():
         ## Web tools for effective data visualisation
 
         Location: [`KIT Campus Alpin, IMK-IFU, Garmisch-Partenkirchen`](https://www.imk-ifu.kit.edu)  
-        Date: `22.01.2020 6-9pm`
+        Date: `22.01.2020 6-9pm`  
+        Meetup: [event link](https://www.meetup.com/alpine-data-lovers/events/267293349/)
 
         """)
     
-    for _, talk in talks.items():
-        talk.render()
-        st.markdown("""\
-            ---  
-            """)
+    for _id, talk in talks.items():
+        if _id[0:2] == '01':
+            talk.render()
+            st.markdown("""\
+                ---  
+                """)
 
 def event02():
     st.markdown("""\
-        TBA
+        ## Reducing the dimensionality of your data
+
+        Location: [`KIT Campus Alpin, IMK-IFU, Garmisch-Partenkirchen`](https://www.imk-ifu.kit.edu)  
+        Date: `19.02.2020 6-9pm`  
+        Meetup: [event link](https://www.meetup.com/alpine-data-lovers/events/268269575/)
+
         """)
 
-event = {1: event01, 2: event02}
+    for _id, talk in talks.items():
+        if _id[0:2] == '02':
+            talk.render()
+            st.markdown("""\
+                ---  
+                """)
+
+
+def event03():
+    st.markdown("""\
+        ## TBA
+
+        Location: [`KIT Campus Alpin, IMK-IFU, Garmisch-Partenkirchen`](https://www.imk-ifu.kit.edu)  
+        Date: `18.03.2020 6-9pm`
+
+        """)
+
+event = {1: event01, 2: event02, 3: event03}
 
 def main():
     st.title("Alpine Data Lovers - Meetup :mountain:")
     page = st.empty()
-    selection = st.sidebar.selectbox("Events", [0, 1, 2], 0, format_func=events.get)
+    selection = st.sidebar.selectbox("Events", [0, 1, 2, 3], 0, format_func=events.get)
 
     if selection == 0:
         page.markdown("""\

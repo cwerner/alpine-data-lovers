@@ -55,7 +55,7 @@ t1 = Talk("Visualizing large gridded data sets on the web with Bokeh Server",
               large local and remote data sets. This talk gives a short
               introduction and some examples using gridded weather radar data.""",
           resources="[GitHub link](https://github.com/cchwala/bokeh_examples_ifu_meetup), "
-                    "[Slides](http://myslides.com), "
+                    "[Slides](https://minio.cwerner.ai/adl/meetup-01/slides/adl01_chwala-bokeh.pdf), "
                     "Libraries: [bokeh](https://docs.bokeh.org/en/latest/)/"
                     "[xarray](http://xarray.pydata.org/en/stable/)", 
           video_url="https://www.youtube.com/watch?v=BHACKCNDMW8")

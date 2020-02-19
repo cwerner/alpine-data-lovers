@@ -96,9 +96,21 @@ t4 = Talk("Reducing the dimension of your data - How losing information leads to
           "[Julius Polz](https://www.imk-ifu.kit.edu/staff_Julius_Polz.php)", 
           "IMK-IFU",
           """\
-              An intro to dimensionality reduction and clustering of complex data. Details TBA...
+              It can be challenging to find latent features in high dimensional data like
+              images or chunks of a time-series. Dimension reduction techniques like UMAP
+              or t-SNE can be used to project the high dimensional data to a lower dimensional
+              representation which we can visualize and which still contains useful information
+              about the global shape of the data. In this meetup, we will talk about how such
+              unsupervised learning techniques can be used to find outliers and similarities
+              in the data. Our example will be the attenuation time-series of commercial microwave
+              links, which are used to derive information about rainfall.
               """
-         )
+          resources="[GitHub link](https://github.com/jpolz/cml_umap_example), "
+                    "[Slides](https://minio.cwerner.ai/adl/meetup-01/slides/adl01_werner-streamlit_slides.pdf), "
+                    "Resources: [UMAP-learn](https://umap-learn.readthedocs.io/en/latest/), "
+                    "[T-SNE](https://lvdmaaten.github.io/tsne/), "
+                    "[Reading](https://onlinelibrary.wiley.com/doi/full/10.1002/wat2.1337)",
+          video_url="https://www.youtube.com/watch?v=BHACKCNDMW8")
 
 
 

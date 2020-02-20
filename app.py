@@ -106,10 +106,10 @@ t4 = Talk("Reducing the dimension of your data - How losing information leads to
               links, which are used to derive information about rainfall.
               """,
           resources="[GitHub link](https://github.com/jpolz/cml_umap_example), " 
-                    "[Slides](https://minio.cwerner.ai/adl/meetup-01/slides/adl01_werner-streamlit_slides.pdf), "
+                    "[Slides](https://minio.cwerner.ai/adl/meetup-02/slides/adl02_polz-dimensionalityreduction_slides.pdf), "
                     "Resources: [UMAP-learn](https://umap-learn.readthedocs.io/en/latest/), "
                     "[T-SNE](https://lvdmaaten.github.io/tsne/), "
-                    "[Reading](https://onlinelibrary.wiley.com/doi/full/10.1002/wat2.1337)",
+                    "[CML Reading](https://onlinelibrary.wiley.com/doi/full/10.1002/wat2.1337)",
           video_url="https://www.youtube.com/watch?v=BHACKCNDMW8")
 
 
